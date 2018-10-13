@@ -1,0 +1,32 @@
+<div class="top">
+    <form>
+      <input type="search" name="search" [(ngModel)]="name" id="search">
+      <button type="submit" (click)="getData()">Search</button> 
+    </form>
+  </div>
+<!-- <div *ngFor="let n of data | slice:0:5">{{n.Title}} {{n.Year}}<br><img src="{{n.Poster}}"></div> -->
+<div class="body"><div class="card" >
+<div class="row"> 
+    <div class="column" *ngFor="let n of data | slice:0:2">
+    <img src="{{n.Poster}}" alt="Avatar" style="width:100%">
+      <h4><b>{{n.Title}}</b></h4> 
+      <p>{{n.Year}}</p> 
+    </div>
+  </div>
+  <div class="card" >
+    <div class="row"> 
+     <div class="column" *ngFor="let n of data | slice:2:4">
+    <img src="{{n.Poster}}" alt="Avatar" style="width:100%">
+      <h4><b>{{n.Title}}</b></h4> 
+      <p>{{n.Year}}</p> 
+    </div>
+  </div>
+  <div class="card" >
+        <div class="row"> 
+         <div class="column" *ngFor="let n of data | slice:4:5">
+        <img src="{{n.Poster}}" alt="Avatar" style="width:100%">
+        
+          <h4><b>{{n.Title}}</b></h4> 
+          <p>{{n.Year}}</p> 
+        </div>
+      </div>
